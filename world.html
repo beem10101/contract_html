@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>titel</title>
+        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+        <py-env>
+            - numpy
+            - matplotlib
+            - paths:
+                - ./data.py
+        </py-env>
+    </head>
+    <body>
+        <div id="plot"></div>
+        <py-script>
+            from data import add
+            x = int(input())
+            y = int(input())
+            print("total=",add(x,y))
+        </py-script>
+        <!-- <py-script output="plot">
+            import matplotlib.pyplot as plt
+            from data import getX_Y
+
+            x, y = getX_Y(1000)
+            fig, ax = plt.subplots()
+            ax.scatter(x,y)
+            fig
+
+        </py-script> -->
+        <!-- <h1><b>src Python</b></h1>
+            <py-script src="./pyscript01.py"></py-script> -->
+        <h1> Python </h1>
+        <div>
+            <py-repl id="my-relp" auto-genatorrete="true"></py-repl>
+        </div>
+    </body>
+</html>
